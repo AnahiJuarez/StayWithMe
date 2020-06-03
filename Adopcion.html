@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta chorset ="iso-8859-1">
+<head>	 
+	<title>StayWithMe</title>
+
+        <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	  <link rel="stylesheet" href="css/estilos1.css">
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	
+</head>
+
+
+<body>
+	
+	<header id="main-header">
+		
+		<a id="logo-header" href="#">
+			<span class="site-name">StayWithMe</span>
+			<span class="site-desc">Clinica / Shop / Adopciones </span>
+		</a> <!-- / #logo-header -->
+
+		<nav>
+			<ul>
+				<li><a href="index.html">Inicio</a></li> 
+				<li><a href="pub.html">Clinica </a></li> 
+				<li><a href="shop.html">Shop</a></li>
+				<li><a href="Adopcion.html">Adopciones </a></li>
+				<li><a href="Contacto.html">Contacto</a></li>
+			</ul>
+		</nav><!-- / nav -->
+
+	</header><!-- / #main-header -->
+
+	
+	<section id="main-content">
+	
+		<article>
+			<header>
+	
+				<h1> <font face=" Gill Sans "> <font color="black"> StayWithMe </font> </font> </h1>
+			</header>
+			
+	<div class="container">		
+	<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#" target="_blank"><img src="01.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Luna</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="02.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Camila</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="03.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Layla</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="04.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Rufo</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="05.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Balto</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="06.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Omally</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="07.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Copo</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+			
+
+			<p class="info"><strong>Example 3:</strong> Random orientation and number of slices</p>
+
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+		
+			
+		</article> <!-- /article -->
+	
+	</section> <!-- / #main-content --
+
+	
+	 <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Phone</h4>
+                <p>55 6789 2345</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>StayWithMe@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p>Calle Matanzas 905, Lindavista Norte</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; StayWithMe | Anahí Juárez</h2>
+    </footer>
+
+	
+</body>
+</html>
